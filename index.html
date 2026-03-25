@@ -1,9 +1,10 @@
+<!-- PAGINA DE LOGIN --> 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Evento Eventoso"</title>
+    <meta name="viewport" content="wicnitial-scale=1.0">
+    <title>Evento Eventoso</title>
 </head>
 <body>
     <h1>Gerenciador de Eventos</h1>
@@ -21,6 +22,32 @@
     </div>
     <br>
     <button type="Submit">Entrar</button>
+    
+
+    <!-- VALIDADOR DE SENHA -->
+    <script>
+        function Login() {
+            event.preventDefault();
+
+            const username =
+            document.getElementById("username").value;
+            const password =
+            document.getElementById("password").value;
+
+            const usuarioCorreto = "admin";
+            const senhaCorreta = "admin";
+
+            if (username === usuarioCorreto && password === senhaCorreta) {
+                window.location.href = "pagina2.html";
+            } else {
+                alert("TA ERRADO!");
+
+    
+        }
+    }
+
+
+    </script>
 
 </body>
 </html>
