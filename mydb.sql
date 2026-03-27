@@ -6,7 +6,7 @@ create table usuarios (
     nome varchar(100) not null,
     email varchar(150) not null unique,
     senha varchar(255) not null,
-    criado_em timestamp default current_timestamp
+    criado_em timestamp default current_timestamp,
 );
 
 create table eventos (
