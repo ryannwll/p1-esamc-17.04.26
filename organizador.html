@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Painel do Organizador</title>
+</head>
+
+<body>
+
+<h1>Criar Evento</h1>
+
+<input id="titulo" placeholder="Título do evento">
+<input id="codigo" placeholder="Código do evento">
+
+<button onclick="criarEvento()">Salvar</button>
+
+<script>
+
+function criarEvento(){
+
+let titulo = document.getElementById("titulo").value
+let codigo = document.getElementById("codigo").value
+
+fetch("http://localhost:3000/evento",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body: JSON.stringify({
+titulo:titulo,
+codigo:codigo
+})
+
+})
+.then(res => res.text())
+.then(data => alert(data))
+
+}
+
+</script>
+
+</body>
+</html>

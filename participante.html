@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Participante</title>
+</head>
+<body>
+
+  <h1>Entrar no Evento</h1>
+
+  <input id="codigo" placeholder="Digite o código do evento">
+  <button onclick="buscarEvento()">Entrar</button>
+
+  <h2>Resultado</h2>
+  <div id="resultado"></div>
+
+  <script>
+    function buscarEvento() {
+      let codigo = document.getElementById("codigo").value;
+      let resultado = document.getElementById("resultado");
+
+      fetch("http://localhost:3000/evento/" + codigo)
+        .then(res => {
+          if (!res.ok) {
+            throw new Error("Código inválido");
+          }
+          return res.json();
+        })
+        .then(data => {
+          resultado.innerHTML = `
+            <p><strong>ID:</strong> ${data.id}</p>
+            <p><strong>Título:</strong> ${data.titulo}</p>
+            <p><strong>Código:</strong> ${data.codigo}</p>
+          `;
+        })
+        .catch(err => {
+          resultado.innerHTML = `<p>${err.message}</p>`;
+        });
+    }
+  </script>
+
+</body>
+</html>

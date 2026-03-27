@@ -1,0 +1,26 @@
+{
+  "name": "p1-esamc-17.04.26",
+  "version": "1.0.0",
+  "description": "Este projeto é o primeiro trabalho avaliativo que possuo na faculdade. Se consiste em um site utilizando HTML, CSS e JavaScript, onde é possível realizar login e senha e um formulário de criação de usuário. Além disso, há uma aba especial para usuários que já possuem seu login e senha.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryannwll/p1-esamc-17.04.26.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryannwll/p1-esamc-17.04.26/issues"
+  },
+  "homepage": "https://github.com/ryannwll/p1-esamc-17.04.26#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.20.0"
+  }
+}
