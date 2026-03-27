@@ -21,7 +21,7 @@
         <input type="password" id="password" placeholder="senha"></input>
     </div>
     <br>
-    <button type="Submit">Entrar</button>
+    <button onclick="Login()">Entrar</button>
     
 
     <!-- VALIDADOR DE SENHA -->
@@ -35,10 +35,10 @@
             document.getElementById("password").value;
 
             const usuarioCorreto = "admin";
-            const senhaCorreta = "admin";
+            const senhaCorreta = "0000s";
 
             if (username === usuarioCorreto && password === senhaCorreta) {
-                window.location.href = "pagina2.html";
+                window.location.href ="/initial.html";
             } else {
                 alert("TA ERRADO!");
 
